@@ -4,8 +4,10 @@ import Search from './components/search/search';
 
 function App() {
   return (
-    <div className="App">
-      <Search />
+    <div className="container">
+      <Search 
+      onSearchChange={(value) => console.log(value)}
+      />
     </div>
   );
 }
