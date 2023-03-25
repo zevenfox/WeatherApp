@@ -16,7 +16,6 @@ function App() {
   const time = current.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
 
 
-
   return (
     <Card
     className="card"
@@ -24,10 +23,20 @@ function App() {
     <Card.Body>
       <Card.Title
       className="title"
-      >{date}</Card.Title>
+      >{date}
+      <botton
+      className = "bottonLeft">
+        +
+      </botton>
+      <div
+      className="dropDownRight">
+        EN
+      </div>
+      </Card.Title>
       <Card.Subtitle
       className="subtitle"
-      >{time}</Card.Subtitle>
+      >{time}
+      </Card.Subtitle>
     <div className="container">
       <Search
       onSearchChange={handleSearchChange}
