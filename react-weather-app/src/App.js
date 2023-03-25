@@ -2,12 +2,21 @@ import React from 'react';
 import './App.css';
 import Search from './components/search/search';
 
+
 function App() {
+  function handleSearchChange(searchData){
+    console.log(searchData);
+  }
+
+
   return (
     <div className="container">
       <Search 
-      onSearchChange={(value) => console.log(value)}
+      onSearchChange={handleSearchChange}
       />
+    <card>
+      <h1>Weather App</h1>
+    </card>
     </div>
   );
 }
