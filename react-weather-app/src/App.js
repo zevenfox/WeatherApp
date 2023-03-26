@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Search from './components/search/search';
 import Card from 'react-bootstrap/Card';
+import logo from './assets/logo-weather.png';
+
 
 function App() {
   function handleSearchChange(searchData){
@@ -21,16 +23,15 @@ function App() {
     className="card"
     >
     <Card.Body>
-      <Card.Title
-      className="title"
+      <Card.Title className="title"
       >{date}
-      <botton
-      className = "bottonLeft">
+      <botton className = "bottonRight">
         +
       </botton>
-      <div
-      className="dropDownRight">
+      <div className="dropDownLeft">
+        <text>
         EN
+        </text>
       </div>
       </Card.Title>
       <Card.Subtitle
@@ -41,6 +42,11 @@ function App() {
       <Search
       onSearchChange={handleSearchChange}
       />
+    </div>
+    <div>
+      <img 
+      className="logo"
+      src={logo} />
     </div>
     </Card.Body>
     </Card>

@@ -49,17 +49,42 @@ body{
   color: #0E8388;
 }
 
-.bottonLeft{
+.bottonRight{
   float: right;
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  padding-right: 1rem;
+  margin-right: 2rem;
+  font-size: 42px;
 }
-
-.dropDownRight{
+.dropDownLeft{
   float: left;
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  padding-left: 1rem;
   outline: solid #0E8388;
+  margin-left: 2rem;
+  border-radius: 7px;
+  height: 30px;
+  width: 30px;
+}
+
+text{
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #0E8388;
+}
+
+.dropdown-toggle::after {
+  display: none !important; 
+}
+
+.logo{
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
