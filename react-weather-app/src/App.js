@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Search from './components/search/search';
+import Search from './components/search/Search';
 import Card from 'react-bootstrap/Card';
 import logo from './assets/logo-weather.png';
+import CurrentWeather from './components/current-weather/CurrentWeather';
 
 
 function App() {
@@ -43,11 +44,12 @@ function App() {
       onSearchChange={handleSearchChange}
       />
     </div>
-    <div>
+    <CurrentWeather />
+    {/* <div>
       <img 
       className="logo"
       src={logo} />
-    </div>
+    </div> */}
     </Card.Body>
     </Card>
   );

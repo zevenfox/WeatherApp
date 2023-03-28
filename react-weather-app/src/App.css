@@ -20,7 +20,10 @@ body{
   border-radius: 40px;
 }
 .container{
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .title{
