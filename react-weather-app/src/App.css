@@ -22,13 +22,14 @@ body{
 .container{
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-.title{
+
+.date{
   position: relative;
-  padding: 1rem;
+  padding-top: 2rem;
   text-align: center;
   
   font-family: 'Inter', sans-serif;
@@ -42,6 +43,7 @@ body{
 .subtitle{
   position: relative;
   text-align: center;
+  padding: 1rem;
 
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -56,8 +58,9 @@ body{
   float: right;
   font-family: 'Inter', sans-serif;
   font-style: normal;
+  font-weight: 200;
   margin-right: 2rem;
-  font-size: 42px;
+  font-size: 60px;
 }
 .dropDownLeft{
   float: left;

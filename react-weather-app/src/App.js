@@ -24,7 +24,8 @@ function App() {
     className="card"
     >
     <Card.Body>
-      <Card.Title className="title"
+    <div className='title-card'>
+      <Card.Title className="date"
       >{date}
       <botton className = "bottonRight">
         +
@@ -35,6 +36,7 @@ function App() {
         </text>
       </div>
       </Card.Title>
+      </div>
       <Card.Subtitle
       className="subtitle"
       >{time}

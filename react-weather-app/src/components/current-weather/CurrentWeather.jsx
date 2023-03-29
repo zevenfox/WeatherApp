@@ -8,13 +8,16 @@ function CurrentWeather(){
             <div>
             <img className="icon" src={icon} />
             </div>
-            <h1>
+            <h1 className='city'>
                 Thailand
             </h1>
             <div>
-                <h1>
+                <h1 className='temp'>
                     30° C
                 </h1>
+                <h2>
+                    Cloudy
+                </h2>
             </div>
         </div>
     );
