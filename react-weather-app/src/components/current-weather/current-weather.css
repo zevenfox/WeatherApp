@@ -1,7 +1,7 @@
 .icon{
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    margin: 30px auto;
     display: block;
 }
 .city{
@@ -35,4 +35,11 @@ h2{
     text-align: center;
     color: #0E8388;
     margin-top: 1rem;
+}
+.city{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

@@ -1,21 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
 
 
-/* body{
-  background: #cbe4de;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
+body{
+  font-family: 'Inter', sans-serif;
+}
 
 
 
 .backgroundColor{
-    background: #cbe4de;
+  background: #cbe4de;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   margin: 0;
