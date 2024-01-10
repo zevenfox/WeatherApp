@@ -1,5 +1,4 @@
 import './current-weather.css';
-import icon2 from '../../assets/weather-icon/weather2.png';
 
 
 const descriptionToImageMap = {

@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 // import logo from './assets/logo-weather.png';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 import Headers from './components/Header/Header';
+import MoreWeatherInfo from './components/more-weather-info/MoreWeatherInfo';
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -24,7 +25,7 @@ function App() {
   
   function backgroundChange() {
     const currentTime = new Date().getHours();
-    console.log(currentTime)
+    // console.log(currentTime)
     if (currentTime >= 6 && currentTime <= 18) {
       setBackgroundColor('#cbe4de');
     } else {
@@ -113,7 +114,7 @@ function App() {
       {currentWeather && <CurrentWeather data= {currentWeather}/>}
     </div>
     <div className={isVisible? "show" : "hide"} >
-      LOL
+    {currentWeather &&<MoreWeatherInfo data= {currentWeather}/>}
     </div>
     </Card.Body>
     </Card>
