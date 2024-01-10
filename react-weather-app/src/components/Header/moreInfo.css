@@ -1,0 +1,8 @@
+.buttonRight{
+    width: fit-content;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 1rem;
+
+}

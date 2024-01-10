@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
 
 
-body{
+/* body{
   background: #cbe4de;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -10,7 +10,21 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
+} */
+
+
+
+.backgroundColor{
+    background: #cbe4de;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
 .card{
   background: #FFFFFF;
   border-radius: 5px;
@@ -18,13 +32,30 @@ body{
   height: 716px;
   position: relative;
   border-radius: 40px;
+  
 }
+.cardBody{
+  display: flex;
+}
+
+.contentLeft{
+  min-width: 449px;
+}
+
+.show{
+  opacity: 100%;
+}
+.hide{
+  opacity: 0%;
+}
+
 .container{
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 
 
 .date{

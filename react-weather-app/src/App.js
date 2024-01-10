@@ -1,15 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Search from './components/search/Search';
+import CurrentWeather from './components/current-weather/CurrentWeather';
 import Card from 'react-bootstrap/Card';
 // import logo from './assets/logo-weather.png';
-import CurrentWeather from './components/current-weather/CurrentWeather';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
+import Headers from './components/Header/Header';
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecastWeather, setForecastWeather] = useState(null);
+  const [backgroundColor, setBackgroundColor] = useState('');
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const [cardWidth, setCardWidth] = useState("449px");
+  const [isVisible, setVisible] = useState(false)
 
+
+  function handleMoreInfoButtonClick(isSelected) {
+    // Update cardWidth based on the isSelected value
+    setCardWidth(isSelected ? "898px" : "449px");
+    setVisible(isSelected ? true : false);
+  }
+  
+  function backgroundChange() {
+    const currentTime = new Date().getHours();
+    console.log(currentTime)
+    if (currentTime >= 6 && currentTime <= 18) {
+      setBackgroundColor('#cbe4de');
+    } else {
+      setBackgroundColor('#2C3333');
+    }
+  }
+  useEffect(() => {
+    backgroundChange();
+
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+      backgroundChange();
+    }, 30000); // Update every 30 sec
+
+    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+  }, [currentTime]);
+  
+  
   function handleSearchChange(searchData) {
     const [lat, lon] = searchData.value.split(' ');
 
@@ -63,46 +96,28 @@ function App() {
   const date = `${dayNames[current.getDay()]} ${current.getDate()}, ${
     monthNames[current.getMonth()]
   } ${current.getFullYear()}`;
-  const time = current.toLocaleString('en-US', {
-    hour: 'numeric',
-    minute: 'numeric',
-    hour12: true,
-  });
+
 
   return (
-    <Card
+    <div className="backgroundColor" style={{ backgroundColor: backgroundColor }}>
+    <Card  
     className="card"
+    style={{ width: cardWidth }}
     >
-    <Card.Body>
-    <div className='title-card'>
-      <Card.Title className="date "
-      >{date}
-      <botton className = "bottonRight">
-        +
-      </botton>
-      <div className="dropDownLeft">
-        <text>
-        EN
-        </text>
+    <Card.Body className= "cardBody">
+    <div className='contentLeft'>
+      <Headers date={date} currentTime={currentTime} onMoreInfoButtonClick={handleMoreInfoButtonClick}/>
+      <div className="container">
+        <Search onSearchChange={handleSearchChange}/>
       </div>
-      </Card.Title>
-      </div>
-      <Card.Subtitle
-      className="subtitle"
-      >{time}
-      </Card.Subtitle>
-    <div className="container">
-      <Search
-      onSearchChange={handleSearchChange}/>
+      {currentWeather && <CurrentWeather data= {currentWeather}/>}
     </div>
-    {currentWeather && <CurrentWeather data= {currentWeather}/>}
-    {/* <div>
-      <img 
-      className="logo"
-      src={logo} />
-    </div> */}
+    <div className={isVisible? "show" : "hide"} >
+      LOL
+    </div>
     </Card.Body>
     </Card>
+    </div>
   );
 }
 

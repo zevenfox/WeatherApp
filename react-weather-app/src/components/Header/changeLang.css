@@ -1,0 +1,14 @@
+.selectLang{
+    width: fit-content;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    float: left;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    outline: solid #0E8388;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    border-radius: 7px;
+}
+
