@@ -12,17 +12,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: pwd
-        run: pwd
-            ls -al
-            cd react-weather-app
-      - name: install 
+
+      - name: Display Current Directory
+        run: |
+          pwd
+          ls -al
+
+      - name: Change to App Directory
+        run: cd react-weather-app
+
+      - name: Install Dependencies
         run: npm install
-      - name: build
+
+      - name: Build
         run: npm run build
-      - name: test
+
+      - name: Test
         run: npm run test
+
