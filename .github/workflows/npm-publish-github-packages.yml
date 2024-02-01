@@ -16,10 +16,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: |
-          pwd
-          ls -al
-          cd react-weather-app
-          npm install
-          npm run build
-          npm run test
+      - name: pwd
+        run: pwd
+            ls -al
+            cd react-weather-app
+      - name: install 
+        run: npm install
+      - name: build
+        run: npm run build
+      - name: test
+        run: npm run test
