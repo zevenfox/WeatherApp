@@ -25,9 +25,6 @@ jobs:
           pwd
           ls -al
 
-      - name: Change to App Directory
-        run: cd react-weather-app
-
       - name: Install Dependencies
         run: npm install
 
